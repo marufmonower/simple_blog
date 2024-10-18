@@ -1,0 +1,28 @@
+<h1>Blog Posts</h1>
+<ul>
+  {% for post in posts %}
+    <li>{{ post.title }} - {{ post.author }} - {{ post.created_at }}</li>
+  {% endfor %}
+</ul>
+<title>Button Example</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the Button to Redirect</h1>
+
+    <a href="{% url 'post_create' %}" class="button">Go to Another Page</a>
